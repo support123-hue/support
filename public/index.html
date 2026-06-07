@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jane Tool | Secure Obama-Style Mobilization Platform</title>
+  <meta name="description" content="Jane Tool is a supporter mobilization and resource tracking prototype for Jane Mwende Kibati, Kitui County Women Representative 2027." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#home" aria-label="Jane Tool home">
+        <span class="brand-mark">J</span>
+        <span>
+          <strong>Jane Tool</strong>
+          <small>Secure Mobilization Platform</small>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <div class="nav-links">
+        <a href="#support">Support</a>
+        <a href="#register">Register</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#mechanism">Mechanism</a>
+        <a href="#security">Security</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Kitui County • Women Representative 2027</span>
+        <h1>Jane Mwende Kibati Supporters Platform</h1>
+        <p class="lead">A secure Obama-style campaign mechanism for registering supporters, receiving M-Pesa contributions, coordinating volunteers, tracking mobilizers, and analysing public messages across Kitui County.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#support">Support Jane</a>
+          <a class="btn secondary" href="#register">Register as Supporter</a>
+        </div>
+        <div class="quick-contact">Call / SMS / WhatsApp: <a href="tel:+254729447922">0729 447922</a></div>
+      </div>
+      <aside class="hero-card">
+        <div class="photo-frame">
+          <div class="photo-placeholder">
+            <span>Jane Photo</span>
+            <small>Replace with official campaign image</small>
+          </div>
+        </div>
+        <div class="candidate-note">
+          <strong>Jane Tool</strong>
+          <p>Built with the same Obama-style mechanism: supporter sign-up, small donations, mobilizer tracking, message analysis, dashboard reporting, and strong data protection controls.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="stats-section" aria-label="Campaign progress summary">
+      <div class="stat-card"><span id="totalRaised">KSh 0</span><small>Total recorded</small></div>
+      <div class="stat-card"><span id="supporterCount">0</span><small>Supporters</small></div>
+      <div class="stat-card"><span id="volunteerCount">0</span><small>Volunteers</small></div>
+      <div class="stat-card"><span id="messageCount">0</span><small>Messages</small></div>
+    </section>
+
+    <section id="mechanism" class="section mechanism-section">
+      <div class="section-heading">
+        <span class="section-tag">Obama-Style Mechanism Changed to Jane</span>
+        <h2>How the Jane Tool mechanism works</h2>
+        <p>The platform uses a campaign cycle: collect support, confirm payment, register location, analyse messages, report progress, and protect supporter data.</p>
+      </div>
+      <div class="mechanism-grid">
+        <div class="card mechanism-card"><strong>1. Supporter Entry</strong><p>Supporter opens website or later dials USSD and chooses Support, Register, Volunteer, or Send Message.</p></div>
+        <div class="card mechanism-card"><strong>2. Contribution</strong><p>Supporter chooses KSh 10, 20, 50, 100, 200, 300, 500, or Other and confirms using M-Pesa STK Push.</p></div>
+        <div class="card mechanism-card"><strong>3. Data Capture</strong><p>The system records name, phone, constituency, ward, consent, amount, transaction status, and time.</p></div>
+        <div class="card mechanism-card"><strong>4. Analysis</strong><p>Messages and notes are analysed to show repeated community themes such as water, youth, roads, health, education, and women empowerment.</p></div>
+        <div class="card mechanism-card"><strong>5. Dashboard</strong><p>Admin views totals, supporter growth, mobilizer activity, ward reports, messages, and exportable records.</p></div>
+        <div class="card mechanism-card"><strong>6. Security</strong><p>Private data is protected through login, role access, validation, audit logs, encryption, consent, and no public phone-number display.</p></div>
+      </div>
+    </section>
+
+    <section id="support" class="section two-column">
+      <div>
+        <span class="section-tag">Resource Mobilization</span>
+        <h2>Support Jane through small contributions</h2>
+        <p>Supporters can choose a quick amount, enter their M-Pesa number, and receive a payment prompt when the live M-Pesa integration is connected. In this prototype, entries are stored in the browser for demonstration.</p>
+        <div class="amount-grid" id="amountGrid">
+          <button data-amount="10">KSh 10</button>
+          <button data-amount="20">KSh 20</button>
+          <button data-amount="50">KSh 50</button>
+          <button data-amount="100">KSh 100</button>
+          <button data-amount="200">KSh 200</button>
+          <button data-amount="300">KSh 300</button>
+          <button data-amount="500">KSh 500</button>
+          <button data-amount="other">Other</button>
+        </div>
+        <p class="note">Live payment requires a verified M-Pesa Paybill/Till or Daraja STK Push setup.</p>
+      </div>
+      <form class="card form-card" id="contributionForm">
+        <h3>Contribution Form</h3>
+        <label>Full name <input type="text" name="name" placeholder="Enter supporter name" required /></label>
+        <label>M-Pesa phone number <input type="tel" name="phone" placeholder="07XX XXX XXX" required /></label>
+        <label>Amount <input type="number" name="amount" min="1" placeholder="Choose or enter amount" required /></label>
+        <label>Constituency
+          <select name="constituency" required>
+            <option value="">Select constituency</option>
+            <option>Kitui Central</option><option>Kitui East</option><option>Kitui Rural</option><option>Kitui South</option><option>Kitui West</option><option>Mwingi Central</option><option>Mwingi North</option><option>Mwingi West</option>
+          </select>
+        </label>
+        <label>Ward / location <input type="text" name="ward" placeholder="Enter ward or location" /></label>
+        <label class="checkbox"><input type="checkbox" name="consent" required /> I consent to be contacted by Jane Team and agree that my details will be used only for contribution follow-up, campaign communication, and supporter records.</label>
+        <button class="btn primary full" type="submit">Securely Record Support</button>
+      </form>
+    </section>
+
+    <section id="register" class="section two-column alt">
+      <form class="card form-card" id="supporterForm">
+        <h3>Register Supporter</h3>
+        <label>Full name <input type="text" name="name" required /></label>
+        <label>Phone number <input type="tel" name="phone" required /></label>
+        <label>Constituency
+          <select name="constituency" required>
+            <option value="">Select constituency</option>
+            <option>Kitui Central</option><option>Kitui East</option><option>Kitui Rural</option><option>Kitui South</option><option>Kitui West</option><option>Mwingi Central</option><option>Mwingi North</option><option>Mwingi West</option>
+          </select>
+        </label>
+        <label>Ward / village <input type="text" name="ward" /></label>
+        <label class="checkbox"><input type="checkbox" name="consent" required /> I agree to receive campaign communication from Jane Team.</label>
+        <button class="btn primary full" type="submit">Register</button>
+      </form>
+      <div>
+        <span class="section-tag">Supporter Registration</span>
+        <h2>Build a clean supporter list</h2>
+        <p>The platform records supporters by name, phone, constituency, ward, and registration date. The live version can export this into Excel and separate users by campaign role.</p>
+        <ul class="feature-list">
+          <li>Supporter registration without payment</li>
+          <li>Constituency and ward reporting</li>
+          <li>Consent checkbox for responsible contact</li>
+          <li>Excel-ready data structure</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="volunteer" class="section two-column">
+      <div>
+        <span class="section-tag">Volunteer Network</span>
+        <h2>Register mobilizers and volunteers</h2>
+        <p>Supporters can join as youth mobilizers, women group mobilizers, ward coordinators, polling station agents, or general volunteers.</p>
+      </div>
+      <form class="card form-card" id="volunteerForm">
+        <h3>Volunteer Form</h3>
+        <label>Full name <input type="text" name="name" required /></label>
+        <label>Phone number <input type="tel" name="phone" required /></label>
+        <label>Volunteer type
+          <select name="role" required>
+            <option value="">Select role</option>
+            <option>Youth mobilizer</option><option>Women group mobilizer</option><option>Ward coordinator</option><option>Polling station agent</option><option>General volunteer</option>
+          </select>
+        </label>
+        <label>Ward / location <input type="text" name="ward" required /></label>
+        <button class="btn primary full" type="submit">Join Jane Team</button>
+      </form>
+    </section>
+
+    <section id="messages" class="section two-column alt">
+      <form class="card form-card" id="messageForm">
+        <h3>Send Message</h3>
+        <label>Name <input type="text" name="name" /></label>
+        <label>Phone number <input type="tel" name="phone" /></label>
+        <label>Message <textarea name="message" rows="5" placeholder="Share your concern, idea, or message" required></textarea></label>
+        <button class="btn primary full" type="submit">Send Message</button>
+      </form>
+      <div>
+        <span class="section-tag">Listening Tool</span>
+        <h2>Obama-style message analysis, changed to Jane</h2>
+        <p>The live version can analyse common words and themes in supporter messages, meeting notes, and speeches so the team understands what people are raising most often.</p>
+        <div class="theme-chips"><span>Water</span><span>Women empowerment</span><span>Youth</span><span>Health</span><span>Education</span><span>Roads</span><span>Jobs</span></div>
+      </div>
+    </section>
+
+    <section id="security" class="section security-section">
+      <div class="section-heading">
+        <span class="section-tag">Security Features</span>
+        <h2>Security built into the live version</h2>
+        <p>This prototype now includes a backend security plan and demo-ready structure. The live version must run on HTTPS with a real database and protected admin access.</p>
+      </div>
+      <div class="security-grid">
+        <div class="card"><h3>Access Control</h3><p>Admin login, strong passwords, bcrypt password hashing, role-based access for candidate, finance, coordinator, and viewer accounts.</p></div>
+        <div class="card"><h3>Payment Protection</h3><p>M-Pesa credentials stored in environment variables, secure callback URL, transaction status verification, and duplicate transaction checks.</p></div>
+        <div class="card"><h3>Data Protection</h3><p>Consent checkbox, minimal data collection, hidden public phone numbers, encrypted backups, and deletion/export procedures.</p></div>
+        <div class="card"><h3>Attack Prevention</h3><p>Input validation, output escaping, CSRF protection, rate limiting, secure cookies, HTTP security headers, and audit logs.</p></div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section dashboard-section">
+      <div class="section-heading">
+        <span class="section-tag">Admin Dashboard Prototype</span>
+        <h2>Private tracking dashboard</h2>
+        <p>This demo dashboard uses local browser storage for preview only. The new secure backend folder included in this package shows the live architecture for authentication, M-Pesa callback handling, validation, audit logs, and database records.</p>
+      </div>
+      <div class="dashboard-grid">
+        <div class="card">
+          <h3>Recent Contributions</h3>
+          <div class="table-wrap"><table><thead><tr><th>Name</th><th>Amount</th><th>Area</th><th>Status</th></tr></thead><tbody id="contributionTable"></tbody></table></div>
+        </div>
+        <div class="card">
+          <h3>Recent Supporters</h3>
+          <div class="table-wrap"><table><thead><tr><th>Name</th><th>Phone</th><th>Constituency</th></tr></thead><tbody id="supporterTable"></tbody></table></div>
+        </div>
+        <div class="card">
+          <h3>Volunteer List</h3>
+          <div class="table-wrap"><table><thead><tr><th>Name</th><th>Role</th><th>Ward</th></tr></thead><tbody id="volunteerTable"></tbody></table></div>
+        </div>
+        <div class="card">
+          <h3>Message Themes</h3>
+          <div id="wordCloud" class="word-cloud"></div>
+        </div>
+      </div>
+      <div class="dashboard-actions">
+        <button class="btn secondary" id="exportBtn">Export Demo CSV</button>
+        <button class="btn danger" id="clearBtn">Clear Demo Data</button>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="card contact-card">
+        <h2>Contact Jane Team</h2>
+        <p>For support, payment follow-up, volunteer coordination, or campaign communication:</p>
+        <a class="contact-number" href="tel:+254729447922">0729 447922</a>
+        <p class="note">USSD phase can later be added as <strong>*XXX#</strong> after a service code is approved by a USSD provider.</p>
+      </div>
+      <div class="card compliance-card">
+        <h3>Compliance reminders</h3>
+        <p>Because this platform handles contributions and political supporter information, the live version should include campaign finance record keeping, receipt rules, consent, secure storage, access controls, and data deletion procedures.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <footer class="footer">
+    <p>© 2026 Jane Tool Prototype. Built for demonstration before live M-Pesa, USSD, and secure database integration.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "jane-tool-secure-backend-skeleton",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Secure backend skeleton for Jane Tool: Obama-style supporter mobilization, M-Pesa contribution workflow, message analysis, and admin dashboard.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "@prisma/client": "latest",
+    "bcryptjs": "latest",
+    "cookie-parser": "latest",
+    "cors": "latest",
+    "csurf": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "express-validator": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest",
+    "morgan": "latest",
+    "pino": "latest",
+    "prisma": "latest"
+  }
+}
